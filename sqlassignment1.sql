@@ -1,7 +1,7 @@
 #Brian Weinfeld
 #Assignment 1
 
-#1. Answer: 4983 miles -- JFK to HNL
+#1. Answer: 4983 miles - JFK to HNL
 SELECT distance, origin, dest
 FROM flights
 ORDER BY distance DESC
