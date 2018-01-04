@@ -11,7 +11,6 @@ LIMIT 1;
 SELECT 
 DISTINCT engines
 FROM planes
-
 ORDER BY engines;
 
 SELECT 
@@ -22,43 +21,34 @@ ORDER BY engines, seats DESC;
 
 #3. Answer: 336776
 SELECT COUNT(*)
-
-FROM flights
+FROM flights;
 
 
 #4. Answer: Many
 SELECT carrier, COUNT(*)
-
 FROM flights
-
 GROUP BY carrier;
 
 #5. Answer: Many
 SELECT carrier,
 COUNT(*) AS 'Total'
 FROM flights
-
 GROUP BY carrier
 ORDER BY Total DESC; 
 
 #6. Answer: Many
 SELECT carrier,
-
 COUNT(*) AS 'Total'
 FROM flights
-
 GROUP BY carrier
 ORDER BY Total DESC
-
 LIMIT 5;
 
 #7. Answer: Many
 SELECT carrier,
-
 COUNT(*) AS 'Total'
 FROM flights
 WHERE distance > 1000
-
 GROUP BY carrier
 ORDER BY Total DESC
 LIMIT 5;
@@ -67,7 +57,6 @@ LIMIT 5;
 SELECT 
 CAST(CONCAT(year,'-',month,'-',day) AS DATE) AS 'Date',
 ROUND(AVG(temp), 2) AS 'Average Daily Temperature'
-
 FROM weather
 WHERE origin = 'EWR'
 GROUP BY Date
